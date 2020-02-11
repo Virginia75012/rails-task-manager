@@ -1,0 +1,15 @@
+<h1>My Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <% if task.completed == true %>
+      <li>[x]<%= task.title %></li>
+    <% else %>
+      <li>[ ]<%= task.title %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+
+<!-- <i class="far fa-check-square"></i>
+<i class="far fa-square"></i> -->
+
