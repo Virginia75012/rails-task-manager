@@ -2,9 +2,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <% if task.completed == true %>
-      <li>[x]<%= task.title %></li>
+      <li>[x]<%= link_to task.title, task_path(task) %></li>
     <% else %>
-      <li>[ ]<%= task.title %></li>
+      <li>[ ]<%= link_to task.title, task_path(task) %></li>
     <% end %>
   <% end %>
 </ul>
@@ -12,4 +12,5 @@
 
 <!-- <i class="far fa-check-square"></i>
 <i class="far fa-square"></i> -->
+
 
